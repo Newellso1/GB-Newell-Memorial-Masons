@@ -1,0 +1,108 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid black; */
+    font-family: Mallanna;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.header, .footer {
+    display: flex;
+    background-color: #428262;
+}
+
+/* Header Styles */
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100px;
+    top:0;
+    box-shadow: 0 -5px 20px #2d5843;
+}
+
+.footer {
+    height: 50px;
+    box-shadow: 0 0 20px#2d5843;
+}
+/*Styles for Logo */
+
+.logo {
+    height: 95px;
+    width: 95px;
+}
+
+.logo img {
+   object-fit: contain;
+   height: 95px;
+}
+
+/* Styles for Nav bar */
+
+.navigation {
+    display: flex;
+    height: inherit;
+    gap: 50px;
+}
+
+.navigation a {
+    font-size: 18px;
+    color: #0A311E;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    line-height: 20px;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: #428262;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.container {
+    width: 80%;
+    background-color: white;
+}
+
+ 
+/* styles for content */
+
+.page {
+    height: 100vh;
+    background-color:#e3f5ec;
+    /* border: 1px solid black; */
+    padding: 110px;
+}
+
+.about {
+    margin: 100px 0 0 0;
+}
+
+.newMemorials {
+
+}
+
+.additionalInscriptions {
+    
+}
+
+.contact {
+
+}
+
