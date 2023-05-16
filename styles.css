@@ -2,6 +2,14 @@ html {
     scroll-behavior: smooth;
 }
 
+.main::-webkit-scrollbar {
+    display: none;
+  }
+
+  .example {
+    scrollbar-width: none;  /* Firefox */
+  }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,30 +19,48 @@ html {
 }
 
 body {
-    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 50px; 
 }
 
-.header, .footer {
+
+
+.main {
     display: flex;
-    background-color: #428262;
+    flex-direction: column;
+    background-color:#428262;
+    align-items: center;
+    flex: 1;
+    height: 83vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 /* Header Styles */
 
-.header {
+.header, .footer {
+    display: flex;
+    background-color: #428262;
+    /* opacity: 80%; */
+    width: 100vw;
     position: fixed;
+}
+
+.header {
     display: flex;
     justify-content: center;
-    width: 100vw;
-    height: 100px;
-    top:0;
     box-shadow: 0 -5px 20px #2d5843;
+    top: 0;
+    height: 100px
 }
 
 .footer {
+    bottom: 0;
     height: 50px;
     box-shadow: 0 0 20px#2d5843;
 }
+
+
 /*Styles for Logo */
 
 .logo {
@@ -64,34 +90,18 @@ body {
     text-align: center;
     line-height: 20px;
 }
-
-
-.main {
-    display: flex;
-    flex-direction: column;
-    background-color: #428262;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
-}
-
-.container {
-    width: 80%;
-    background-color: white;
-}
-
  
 /* styles for content */
 
 .page {
-    height: 100vh;
+    height: calc(100vh - 150px);
+    width: 85vw;
     background-color:#e3f5ec;
-    /* border: 1px solid black; */
-    padding: 110px;
+   
 }
 
 .about {
-    margin: 100px 0 0 0;
+
 }
 
 .newMemorials {
