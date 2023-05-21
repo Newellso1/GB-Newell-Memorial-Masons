@@ -2,13 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
-.main::-webkit-scrollbar {
+/* .main::-webkit-scrollbar {
     display: none;
-  }
+  } */
 
-  .example {
-    scrollbar-width: none;  /* Firefox */
-  }
 
 * {
     box-sizing: border-box;
@@ -20,7 +17,7 @@ html {
 
 body {
     padding-top: 100px;
-    padding-bottom: 50px; 
+    padding-bottom: 50px;
     display: flex;
 }
 
@@ -29,7 +26,7 @@ body {
 .main {
     display: flex;
     flex-direction: column;
-    background-color:#428262;
+    background-color: #428262;
     align-items: center;
     flex: 1;
     height: 83vh;
@@ -39,7 +36,8 @@ body {
 
 /* Header Styles */
 
-.header, .footer {
+.header,
+.footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -80,7 +78,7 @@ body {
 .links {
     display: flex;
     justify-content: space-evenly;
-    width: 800px;    
+    width: 800px;
 }
 
 
@@ -106,7 +104,7 @@ body {
     border-right: 2px solid #0A311E90;
     color: #0A311E95;
 }
- 
+
 /* styles for content */
 
 .background-img {
@@ -128,36 +126,34 @@ body {
     align-items: center;
     height: calc(100vh - 150px);
     width: 85vw;
-    background-color:#b8d0c499;
-    /* background-image: url(images/GB\ Newell\ Logo.png); */
+    background-color: #b8d0c499;
     background-size: contain;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-position: center;
     padding: 20px;
 }
 
 /* Styles for About Page */
 
-.about {
-
-}
+.about {}
 
 
 .content {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* border: 1px solid black; */
     padding: 20px 40px;
     width: 100%;
     border: 1px solid black;
+    z-index: 1;
 }
 
-.picture{
+.picture {
     border: 1px solid black;
     height: 80%;
     width: 300px
 }
+
 .description {
     display: flex;
     width: 50%
@@ -169,17 +165,66 @@ body {
     flex-direction: column;
 }
 
-.carosel {
-    border: 1px solid black;
-    width: 400px;
+.carousel {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    /* border: 1px solid black; */
+
     height: 300px;
-}
-
-.additionalInscriptions {
-    
-}
-
-.contact {
+    margin: 20px 0 0 0;
 
 }
 
+.button {
+    padding: 0 0 2px 0;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    color: #2d5843;
+    font-size: 30px;
+    border: 3px solid #2d5843;
+    border-radius: 40px;
+    background-color: #2d584335;
+    box-shadow: 0 0 10px #1f3d2f70;
+    height: 40px;
+    width: 40px;
+}
+
+
+#left {
+    margin: 0 50px 0 0;
+}
+
+#right {
+    margin: 0 0 0 50px;
+}
+.slides {
+    position: relative;
+    width: 200px;
+    height: 290px;
+}
+
+.slide {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    border: 1px solid;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 1.5s ease;
+}
+
+.active {
+    opacity: 100%;
+    z-index: 1;
+    background-color: white;
+}
+
+
+/* .additionalInscriptions {}
+
+.contact {} */
