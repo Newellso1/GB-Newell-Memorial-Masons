@@ -215,13 +215,14 @@ body {
     position: absolute;
     opacity: 0;
     z-index: 0;
-    transition: opacity 1.5s ease;
+    transition: opacity 1s ease-in-out;
+    /* background-color: white; */
 }
 
 .active {
     opacity: 100%;
     z-index: 1;
-    background-color: white;
+    transition-delay: 1;
 }
 
 
