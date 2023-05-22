@@ -27,3 +27,30 @@ function previous() {
 // Left and right buttons
 leftButton.addEventListener('click', previous);
 rightButton.addEventListener('click', next);
+
+// Variables for letter button
+
+const letterButton = document.querySelector(".letter");
+const firstLine= document.querySelector(".firstLine");
+const secondLine= document.querySelector(".secondLine")
+const thirdLine= document.querySelector(".thirdLine")
+
+function letter() {
+    if (firstLine.classList.contains("inscribe")){
+        firstLine.classList.remove("inscribe");
+        secondLine.classList.remove("inscribe");
+        thirdLine.classList.remove("inscribe");
+        letterButton.style.backgroundColor = "#2d584330";
+        letterButton.innerHTML="&#9754; Letter Me"
+        
+    } else {
+        firstLine.classList.add("inscribe");
+        secondLine.classList.add("inscribe");
+        thirdLine.classList.add("inscribe");
+        letterButton.style.backgroundColor = "#2d584370";
+        letterButton.innerHTML="&#9754; Delete Me"
+
+    }
+}
+
+letterButton.addEventListener('click', letter);

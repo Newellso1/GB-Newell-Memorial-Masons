@@ -34,6 +34,9 @@ body {
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+}
 /* Header Styles */
 
 .header,
@@ -60,8 +63,6 @@ body {
     box-shadow: 0 0 20px#2d5843;
 }
 
-
-/*Styles for Logo */
 
 /* Styles for Nav bar */
 
@@ -100,9 +101,9 @@ body {
 }
 
 .links a:active {
-    border-left: 2px solid #0A311E90;
-    border-right: 2px solid #0A311E90;
-    color: #0A311E95;
+    border-left: 2px solid #0A311E;
+    border-right: 2px solid #0A311E;
+    color: #0A311E;
 }
 
 /* styles for content */
@@ -151,7 +152,7 @@ body {
 }
 
 .picture {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 80%;
     width: 300px
 }
@@ -165,6 +166,7 @@ body {
 
 .newMemorials .content {
     flex-direction: column;
+    justify-content: center;
 }
 
 .carousel {
@@ -207,6 +209,7 @@ body {
     position: relative;
     width: 200px;
     height: 290px;
+
 }
 
 .slide {
@@ -218,11 +221,15 @@ body {
     position: absolute;
     opacity: 0;
     z-index: 0;
+    left: 0;
+    top: 0;
     transition: opacity 1s ease-in-out;
 }
 
 .slide img {
     width: inherit;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #2d584980;
 }
 
 .active {
@@ -235,17 +242,81 @@ body {
 /* Additional Inscriptions styles */
 
 .additionalInscriptions .description {
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
 }
 
 .additionalHeadstone {
-    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    place-content: flex-start;
+    place-items: center;
+    /* border: 1px solid; */
     width: 50%;
     height: 400px;
     background-image: url(images/roundtop.svg);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-   
+    text-align: center;
+    gap: 5px
 }
+
+.additionalHeadstone p {
+    font-weight: bolder;
+    /* border: 1px solid black; */
+    padding: 0;
+    line-height: 25px;
+}
+
+.letter {
+    font-size: 22px;
+    border: 4px solid #2d5843;
+    border-radius: 10px;
+    margin: 30px 0 0 0;
+    padding: 0 10px 0 10px;
+    background-color: #2d584330;
+    box-shadow: 0 0 10px #2d584980;
+    user-select: none;
+    transition: all 1s ease;
+}
+
+.inscriptionHeading {
+    margin: 50px 0 0 0;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.inscriptionName {
+    font-size: 25px;
+}
+
+
+.firstLine {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.secondLine {
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+}
+
+.thirdLine {
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+.inscribe {
+    opacity: 100%;
+}
+
+
+
+
+.letter:hover {
+    background-color: #2d584370;}
 /* .contact {}  */
