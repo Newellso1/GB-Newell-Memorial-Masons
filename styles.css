@@ -331,15 +331,28 @@ body {
 }
 
 .contact .description {
-    border: 1px solid;
     width: 95%;
 }
 
 .contact .contactInfo {
-    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
 }
 
 .contact .details {
     width: 45%;
-    border: 1px solid black; 
+}
+
+.map {
+    height: 300px;
+    width: 300px;
+    border: 4px solid #2d5843;
+    border-radius: 5px;
+}
+
+iframe {
+    border: 3px solid #0A311E;
+    box-shadow: 0 0 10px #2d584980;
+    width: 100%;
+    height: 100%;
 }
