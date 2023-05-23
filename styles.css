@@ -11,7 +11,6 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: 1px solid black; */
     font-family: Mallanna;
 }
 
@@ -46,7 +45,6 @@ body {
     flex-direction: row;
     justify-content: center;
     background-color: #428262;
-    /* opacity: 80%; */
     width: 100vw;
     position: fixed;
 }
@@ -59,9 +57,24 @@ body {
 }
 
 .footer {
+    display: flex;
     bottom: 0;
     height: 50px;
     box-shadow: 0 0 20px#2d5843;
+}
+
+.social {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social a {
+    text-decoration: none;
+    margin: 0 0 5px 0;
+    color: #0A311E;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
 
@@ -73,7 +86,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    /* border: 1px solid black; */
     width: 100%;
 }
 
@@ -145,17 +157,27 @@ body {
     padding: 20px 40px;
     width: 760px;
     height: 533px;
-    /* border: 1px solid black; */
     z-index: 1;
     background-color: #2d584350;
     border-radius: 3px;
     box-shadow: 0 0 10px #2d584980;
 }
 
+.about {
+    line-height: 25px;
+}
+
 .picture {
-    /* border: 1px solid black; */
     height: 80%;
     width: 300px
+}
+
+.picture img {
+    width: 290px;
+    margin-top: 50px;
+    border: 4px solid #2d5843;
+    box-shadow: 0 0 10px #2d584980;
+    border-radius: 10px;
 }
 
 .description {
@@ -174,8 +196,6 @@ body {
     display: flex;
     place-content: center;
     place-items: center;
-    /* border: 1px solid black; */
-
     height: 300px;
     margin: 20px 0 0 0;
 
@@ -244,11 +264,15 @@ body {
 /* Additional Inscriptions styles */
 
 .additionalInscriptions .description {
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     place-content: center;
     place-items: center;
+}
+
+.additionalHeadstone .description {
+    display: flex;
+    width: 50%
 }
 
 .additionalHeadstone {
@@ -256,7 +280,6 @@ body {
     flex-direction: column;
     place-content: flex-start;
     place-items: center;
-    /* border: 1px solid; */
     width: 50%;
     height: 400px;
     background-image: url(images/roundtop.svg);
@@ -269,7 +292,6 @@ body {
 
 .additionalHeadstone p {
     font-weight: bolder;
-    /* border: 1px solid black; */
     padding: 0;
     line-height: 25px;
 }
@@ -332,11 +354,13 @@ body {
 
 .contact .description {
     width: 95%;
+    text-align: center;
 }
 
 .contact .contactInfo {
     display: flex;
     justify-content: space-between;
+    width: 95%;
 }
 
 .contact .details {
@@ -346,13 +370,148 @@ body {
 .map {
     height: 300px;
     width: 300px;
-    border: 4px solid #2d5843;
-    border-radius: 5px;
+    border: 5px solid #2d5843;
+    box-shadow: 0 0 10px #2d584980;
+    border-radius: 10px;
+    box-sizing: content-box;
 }
 
 iframe {
-    border: 3px solid #0A311E;
-    box-shadow: 0 0 10px #2d584980;
     width: 100%;
     height: 100%;
+}
+
+/* Media Query for mobile */
+
+@media only screen and (max-width: 480px) {
+
+    /* * {
+        border: 1px solid red;
+    } */
+
+    h1 {
+        display: none;
+    }
+
+    body {
+        padding-top: 50px;
+        padding-bottom: 35px;
+        display: flex;
+    }
+
+    .header {
+        height: 50px;
+    }
+
+    .header, .footer {
+        opacity: 100%;
+        z-index: 5 ;
+    }
+
+    .footer {
+        height: 35px;
+    }
+    
+    .main {
+        height: 100vh
+    }
+    .page {
+        width: 320px;
+        height: calc(100vh - 100px);
+    }
+    
+    .content {
+        width: 300px;
+        padding: 15px;
+    }
+
+    /* About page styles */
+
+    .about .picture {
+        display: none;
+    }
+
+    /* New Memorial Styles */
+
+    .newMemorials .content {
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .description, .newMemorials p {
+        font-size: 16px;
+        line-height: 18px;
+        width: 310px;
+        height: 400px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .newMemorials p {
+        padding: 0 20px;
+
+    }
+
+    .carousel {
+        margin: 0 0 20px 0;
+        
+    }
+
+    .button {
+        padding: 0 0 2px 0;
+        display: flex;
+        place-content: center;
+        place-items: center;
+        color: #2d5843;
+        font-size: 20px;
+        border: 3px solid #2d5843;
+        border-radius: 15px;
+        height: 30px;
+        width: 30px;
+        user-select: none;
+        cursor: pointer;
+    }
+    
+    #left {
+        margin: 0 10px 0 0;
+    }
+
+    #right {
+        margin: 0 0 0 10px;
+    }
+
+    /* Additional Inscription styles */
+
+    .additionalInscriptions .content {
+        flex-direction: column-reverse;
+    }
+
+    .additionalHeadstone {
+        height: 270px;
+        width: 270px
+    }
+
+    /* Contact Us Styles */
+
+    .contact .description {
+        display: none;
+    }
+
+    .contactInfo {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contactInfo .details {
+        line-height: 18px;
+        text-align: center;
+        width: 290px;
+    }
+
+    .contactInfo .map {
+        width: 250px;
+        height: 250px;
+        margin: 20px 0 0 0;
+    }
+
 }
