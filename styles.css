@@ -37,6 +37,7 @@ body {
 ::-webkit-scrollbar {
     width: 0px;
 }
+
 /* Header Styles */
 
 .header,
@@ -205,6 +206,7 @@ body {
 #right {
     margin: 0 0 0 50px;
 }
+
 .slides {
     position: relative;
     width: 200px;
@@ -315,8 +317,29 @@ body {
 }
 
 
-
-
 .letter:hover {
-    background-color: #2d584370;}
-/* .contact {}  */
+    background-color: #2d584370;
+}
+
+
+/* Contact Us Styles */
+
+.contact .content {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.contact .description {
+    border: 1px solid;
+    width: 95%;
+}
+
+.contact .contactInfo {
+    border: 1px solid;
+}
+
+.contact .details {
+    width: 45%;
+    border: 1px solid black; 
+}
