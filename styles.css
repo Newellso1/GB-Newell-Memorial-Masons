@@ -287,7 +287,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     text-align: center;
-    gap: 5px
+    gap: 5px;
 }
 
 .additionalHeadstone p {
@@ -390,7 +390,8 @@ iframe {
     } */
 
     h1 {
-        display: none;
+        text-align: center;
+        line-height: 30px;
     }
 
     body {
@@ -406,6 +407,11 @@ iframe {
     .header, .footer {
         opacity: 100%;
         z-index: 5 ;
+    }
+
+    .links a {
+        border: none;
+        font-size: 16px;
     }
 
     .footer {
@@ -487,9 +493,43 @@ iframe {
 
     .additionalHeadstone {
         height: 270px;
-        width: 270px
+        width: 270px;
+        margin-top: -40px;
     }
 
+    .additionalInscriptions .description {
+        padding: 0 10px;
+    }
+
+    .additionalHeadstone p {
+        line-height: 19px;
+    }
+    .inscriptionHeading {
+        margin: 20px 0 0 0;
+        font-size: 15px;
+        display: block;
+    }
+    
+    .inscriptionName {
+        margin-top: -5px;
+        font-size: 17px;
+    }
+
+    .inscription {
+        margin-top: -5px;
+        font-size: 10px;
+
+    }
+
+
+    .newInscription {
+        margin-top: -5px
+    }
+
+    .newInscription .inscriptionName {
+        margin-top: -1px;
+    }
+    
     /* Contact Us Styles */
 
     .contact .description {
